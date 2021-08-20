@@ -38,6 +38,12 @@
       "prefer-arrow-functions"
     ],
     "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
       "camelcase": "error",
       "import/named": 0,
       "import/order": "error",
