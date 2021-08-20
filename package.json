@@ -1,0 +1,99 @@
+{
+  "name": "katan",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@reduxjs/toolkit": "^1.5.1",
+    "apisauce": "^2.1.1",
+    "axios-cache-adapter": "^2.7.3",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "i18next": "^20.3.2",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.0",
+    "react-redux": "^7.2.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux-persist": "^6.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prefer-arrow-functions"
+    ],
+    "rules": {
+      "camelcase": "error",
+      "import/named": 0,
+      "import/order": "error",
+      "import/no-named-as-default-member": 0,
+      "react/default-props-match-prop-types": "error",
+      "react/jsx-pascal-case": "error",
+      "react/no-multi-comp": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-arrow-functions/prefer-arrow-functions": [
+        "error",
+        {
+          "classPropertiesAllowed": false,
+          "disallowPrototype": false,
+          "returnStyle": "unchanged",
+          "singleReturnOnly": false
+        }
+      ],
+      "prefer-const": "error"
+    },
+    "settings": {
+      "import/resolver": "webpack"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
+    "commitlint": "^12.1.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prefer-arrow-functions": "^3.0.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
