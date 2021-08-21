@@ -16,13 +16,13 @@ const HelloWorld = () => {
   }, [history]);
 
   const handleGetHelloWorld = useCallback(async () => {
-    const response = await client.get('/hello-world');
+    const response = await client.get('/users.json');
     if (response.ok) {
-      alert(response.ok);
+      alert(JSON.stringify(response.data));
+      console.log(response.data);
     } else {
-      alert(
-        'Surgio un error revisa la variable de entorno en el .env y si tenes el backend corriendo',
-      );
+      alert(response.problem);
+      console.log(response.problem);
     }
   }, []);
 

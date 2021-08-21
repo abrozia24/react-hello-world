@@ -14,5 +14,9 @@ RUN yarn install --silent
 # add app
 COPY . ./
 
+ENV REACT_APP_API_URL "http://localhost:3000"
+
+EXPOSE 3000
+
 # start app
 CMD ["yarn", "start"]
